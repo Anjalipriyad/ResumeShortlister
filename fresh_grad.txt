@@ -1,0 +1,17 @@
+Emily Wong
+Recent Graduate
+
+SKILLS:
+- Java (academic projects)
+- Spring Boot (internship)
+- Docker (self-taught)
+- MongoDB
+
+EXPERIENCE:
+- 6-month internship at StartupInc
+
+EDUCATION:
+- BS in Computer Science
+
+PROJECTS:
+- Built microservice-based student portal (AWS free tier)

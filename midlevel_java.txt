@@ -1,0 +1,18 @@
+Sarah Chen
+Java Developer
+
+SKILLS:
+- Java (4 years)
+- Spring Framework
+- Basic AWS
+- MySQL
+- Git
+
+EXPERIENCE:
+- Developer at RetailSoft (4 years)
+
+EDUCATION:
+- BS in Information Technology
+
+PROJECTS:
+- Developed REST APIs for e-commerce platform

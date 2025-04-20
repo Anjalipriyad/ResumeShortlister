@@ -1,0 +1,23 @@
+James Wilson
+Senior Java Architect
+
+TECHNICAL SKILLS:
+- Java (11 years)
+- Spring Boot, Spring Cloud
+- AWS (EC2, Lambda, RDS)
+- Docker/Kubernetes
+- Microservices architecture
+- PostgreSQL/MongoDB
+
+EXPERIENCE:
+- Lead Developer at CloudTech (5 years)
+- Senior Developer at FinCorp (6 years)
+
+EDUCATION:
+- MS in Computer Science
+- AWS Certified Solutions Architect
+- Spring Professional Certification
+
+PROJECTS:
+- Led cloud migration of monolithic app to microservices (AWS)
+- Designed CI/CD pipeline for 50+ services

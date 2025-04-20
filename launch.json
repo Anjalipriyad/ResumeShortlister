@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "jdk",
+        "name": "Launch AdvancedResumeShortlister",
+        "request": "launch",
+        "mainClass": "AdvancedResumeShortlister.java",
+        "projectName": "New folder (2)",  // Add this line
+        "args": ["job_requirements.txt", "resumes"]
+      }
+    ]
+  }

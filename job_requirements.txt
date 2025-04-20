@@ -1,0 +1,34 @@
+# REQUIRED SKILLS (Skill:Weight)
+SKILL:Java:10
+SKILL:Spring:8
+SKILL:AWS:7
+SKILL:Microservices:6
+SKILL:Docker:5
+SKILL:Kubernetes:5
+SKILL:SQL:5
+
+# MINIMUM REQUIREMENTS
+MIN_EXPERIENCE:5  # Minimum 5 years required
+
+# PREFERRED EDUCATION
+DEGREE:Computer Science
+DEGREE:Software Engineering
+
+# VALUED CERTIFICATIONS
+CERT:AWS Certified
+CERT:Spring Professional
+
+# KEY PROJECT KEYWORDS
+KEYWORD:Cloud Migration
+KEYWORD:CI/CD Pipeline
+KEYWORD:Microservices
+
+# SCORING WEIGHTS (Increased for experience/skills)
+WEIGHT_EXPERIENCE:2.0  # Double weight for experience
+WEIGHT_EDUCATION:0.5
+WEIGHT_CERTIFICATION:1.5
+WEIGHT_PROJECT:1.0
+
+# PENALTIES
+PENALTY_NO_EXPERIENCE:-50  # Heavy penalty for < MIN_EXPERIENCE
+PENALTY_WRONG_TECH:-30     # Penalty for non-Java stack

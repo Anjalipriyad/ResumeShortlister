@@ -1,0 +1,15 @@
+David Kim
+Python Data Engineer
+
+SKILLS:
+- Python (5 years)
+- Pandas, NumPy
+- PostgreSQL
+- Airflow
+
+EXPERIENCE:
+- Data Engineer at AnalyticsCo (3 years)
+- Python Developer (2 years)
+
+EDUCATION:
+- BS in Data Science

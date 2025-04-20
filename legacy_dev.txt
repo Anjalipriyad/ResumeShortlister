@@ -1,0 +1,18 @@
+Robert Johnson
+Principal Developer
+
+SKILLS:
+- Java (15 years)
+- J2EE, Struts
+- Oracle DB
+- IBM WebSphere
+
+EXPERIENCE:
+- 15 years at BankSystems
+
+EDUCATION:
+- PhD in Computer Engineering
+- Oracle Certified Professional
+
+PROJECTS:
+- Mainframe modernization projects
