@@ -11,4 +11,24 @@
 - Ranks candidates and provides both **summary and detailed analyses**.  
 - Exports results into a `.csv` file for review.  
 
+---
 
+## ⚙️ Requirements  
+- Java 11 or higher  
+- A folder containing your resumes (`.txt` or `.pdf`)  
+- A **job requirements file** with weights and preferences  
+- A **technical skills list** and a **soft skills list** (plain text files, one skill per line)  
+
+---
+
+## 📂 Project Setup  
+
+Organize your project like this:  
+AdvancedResumeShortlister.java
+job_requirements.txt
+technical_skills.txt
+soft_skills.txt
+resumes/
+resume1.txt
+resume2.pdf
+resume3.txt
