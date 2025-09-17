@@ -1,96 +1,175 @@
 
-# 📄 Resume Shortlister
+
+# 📄 Advanced Resume Shortlister (Java)
 
 ## 📌 Overview
 
-The **Resume Shortlister** is a tool designed to **automatically filter and shortlist resumes** based on job descriptions and required skill sets.
-It helps recruiters, HR teams, and hiring managers quickly identify the most relevant candidates without manually going through every resume.
+The **Advanced Resume Shortlister** is a **Java-based program** that automates the shortlisting of resumes against job requirements.
+It parses resumes, extracts features such as **skills, experience, education, certifications, and projects**, and then ranks candidates using a **weighted scoring system**.
 
-This project demonstrates how **text preprocessing, keyword matching, and scoring** can be applied to recruitment automation.
+This project demonstrates **multi-threaded resume parsing, text extraction, regex-based analysis, and weighted scoring logic** for recruitment automation.
 
 ---
 
 ## 🚀 Features
 
-* **Upload / Input Resume Data** (multiple resumes supported)
-* **Parse & Extract Skills** from resumes (technical + soft skills)
-* **Match Against Job Description**
-* **Generate Shortlist Score** for each candidate
-* **Rank Resumes** by relevance
-* **Export Results** to a structured format (CSV/Excel/Text)
+* **Multi-threaded resume processing** for fast performance.
+* Extracts and evaluates:
+
+  * ✅ Technical Skills
+  * ✅ Soft Skills
+  * ✅ Education (degrees)
+  * ✅ Certifications
+  * ✅ Projects & Keywords
+* **Weighted scoring system** with configurable weights.
+* **Ranks candidates** by score.
+* **Interactive mode**: view detailed candidate analysis in the console.
+* **CSV Export** of ranked results for further review.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Programming Language**: Python (or Java, depending on your version)
-* **Libraries / Tools** (Python version):
-
-  * `pandas` – data handling
-  * `nltk / spacy` – NLP & text processing
-  * `sklearn` – vectorization & similarity scoring
-* **Approach**:
-
-  * Keyword extraction
-  * TF-IDF / Cosine similarity scoring
-  * Rule-based filtering (for must-have skills)
+* **Java 11+**
+* **Core Java Features**: Regex, Concurrency (ExecutorService), Streams
+* **File I/O**: Reads resumes, job requirements, skills lists
+* **CSV Export** for results
+* *(Optional)*: PDF text extraction placeholder (can be extended with Apache PDFBox)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-ResumeShortlister/
-│
-├── resumes/                 # Folder containing resumes (txt/pdf/docx)
-├── job_description.txt      # File with required job description
-├── shortlist.py             # Main script (for scoring & ranking)
-├── utils/                   # Helper functions (parser, text cleaner, etc.)
-└── output/                  # Shortlisted candidates & reports
+AdvancedResumeShortlister.java   # Main application file
+technical_skills.txt             # List of technical skills
+soft_skills.txt                  # List of soft skills
+job_requirements.txt             # Job requirements + weights
+resumes/                         # Folder containing resumes (.txt/.pdf)
+    candidate1.txt
+    candidate2.pdf
+shortlist_results.csv            # Output file (generated after run)
+```
+
+---
+
+## 📄 File Formats
+
+### 1. Job Requirements (`job_requirements.txt`)
+
+Define required skills and weights:
+
+```
+SKILL: Java:5
+SKILL: Python:4
+SKILL: Machine Learning:5
+DEGREE: Master
+CERT: AWS Certified
+KEYWORD: NLP
+WEIGHT_EXPERIENCE: 1.0
+WEIGHT_EDUCATION: 0.8
+WEIGHT_CERTIFICATION: 0.6
+WEIGHT_PROJECT: 0.5
+```
+
+### 2. Technical Skills (`technical_skills.txt`)
+
+```
+Java
+Python
+C++
+Machine Learning
+Data Science
+```
+
+### 3. Soft Skills (`soft_skills.txt`)
+
+```
+Leadership
+Teamwork
+Problem Solving
+Adaptability
+```
+
+### 4. Resumes (`/resumes/`)
+
+* Resumes can be **.txt** or **.pdf** files.
+* Example:
+
+```
+resumes/
+    candidate1.txt
+    candidate2.pdf
+    candidate3.txt
 ```
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone or download the project.
-2. Install dependencies:
+1. Ensure **Java JDK 11+** is installed.
+2. Place `AdvancedResumeShortlister.java` in your project directory.
+3. Place input files (`job_requirements.txt`, `technical_skills.txt`, `soft_skills.txt`) in the same folder.
+4. Create a `resumes/` folder and add resumes.
+5. Compile the project:
 
    ```bash
-   pip install pandas scikit-learn nltk spacy
+   javac AdvancedResumeShortlister.java
    ```
-
-   *(or Java dependencies if running a Java version)*
-3. Place resumes inside the `resumes/` folder.
-4. Define the **job description** inside `job_description.txt`.
-5. Run the program:
+6. Run the program:
 
    ```bash
-   python shortlist.py
+   java AdvancedResumeShortlister job_requirements.txt ./resumes/
    ```
-6. View results inside the `output/` folder (CSV/Excel).
 
 ---
 
-## 📸 App Flow
+## 📊 Output
 
-1. **Input Job Description**
-2. **Upload/Load Resumes**
-3. **Extract Skills & Keywords**
-4. **Match & Score**
-5. **Shortlist Candidates**
-6. **Export Final Results**
+### Console (Top 10 Candidates)
+
+```
+Top Candidates:
+Rank    Name            Score   Summary
+----------------------------------------
+1       candidate1.txt  42.5    Java, Python, AWS...
+2       candidate2.pdf  38.0    Python, ML...
+```
+
+### Detailed Analysis (Interactive)
+
+You can enter a candidate number to view detailed analysis:
+
+```
+Detailed Analysis for: candidate1.txt
+Score: 42.5
+Skills Matching:
+- Java: 3 mentions
+- Python: 2 mentions
+Experience: 7 years
+Education:
+- Master of Computer Science
+Certifications:
+- AWS Certified
+```
+
+### CSV Export (`shortlist_results.csv`)
+
+```
+Rank,Name,Score,Top Skills,Experience,Education
+1,candidate1.txt,42.5,Java;Python;AWS,7,Master of Computer Science
+2,candidate2.pdf,38.0,Python;ML,5,Bachelor of Engineering
+```
 
 ---
 
 ## 💡 Future Enhancements
 
-* Add **ATS (Applicant Tracking System) compatibility**.
-* Use **LLMs (like GPT)** for smarter skill extraction.
-* Add a **web interface** for non-technical users.
-* Support **multi-criteria ranking** (education, experience, skills).
-* Add **visual dashboards** for recruiters.
+* Integrate **Apache PDFBox** for real PDF text extraction.
+* Use **NLP techniques** for smarter skill/project extraction.
+* Add **GUI or Web Dashboard** for non-technical users.
+* Extend to integrate with **ATS (Applicant Tracking Systems)**.
 
 
 
-Do you want me to keep this README **general-purpose** (for both Python/Java versions), or should I make it **specific to your implementation** (e.g., only Python or only Java)?
+👉 Do you want me to also include a **ready-to-use sample job\_requirements.txt, technical\_skills.txt, and soft\_skills.txt** in the repo so you (or others) can run it immediately without creating files manually?
